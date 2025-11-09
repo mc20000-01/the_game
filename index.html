@@ -26,36 +26,12 @@
         color: #ff4c4c;
         font-weight: bold;
     }
-    button {
-        padding: 15px 25px;
-        font-size: 1.2em;
-        border: none;
-        border-radius: 10px;
-        background-color: #4a90e2;
-        color: white;
-        cursor: pointer;
-        margin-top: 30px;
-    }
-    button:hover {
-        background-color: #357ab8;
-    }
 </style>
-<script>
-    function loseGame() {
-        document.getElementById("reminder").textContent = "You thought about The Game… you lose!";
-    }
-
-    window.onload = function() {
-        // Automatically show the loss message
-        setTimeout(loseGame, 500);
-    }
-</script>
 </head>
 <body>
-<h1>Welcome to The Game</h1>
-<p>The Game is simple: once you think about it… you lose.</p>
-<p>Now that you know the rules, you’re playing.</p>
-<p id="reminder" class="loss-message"></p>
-<button onclick="loseGame()">Click here for a reminder</button>
+    <h1>Welcome to The Game</h1>
+    <p>The Game is simple: once you think about it… you lose.</p>
+    <p>Now that you know the rules, you’re playing.</p>
+    <p class="loss-message">You just thought about The Game… you lose!</p>
 </body>
 </html>
