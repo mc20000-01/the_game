@@ -20,6 +20,12 @@
         font-size: 1.5em;
         margin: 20px 0;
     }
+    .loss-message {
+        margin-top: 30px;
+        font-size: 1.8em;
+        color: #ff4c4c;
+        font-weight: bold;
+    }
     button {
         padding: 15px 25px;
         font-size: 1.2em;
@@ -36,12 +42,12 @@
 </style>
 <script>
     function loseGame() {
-        alert("You just lost The Game! 😵");
-        document.getElementById("reminder").textContent = "Yep… you thought about The Game. You lose!";
+        document.getElementById("reminder").textContent = "You thought about The Game… you lose!";
     }
 
     window.onload = function() {
-        setTimeout(loseGame, 500); // triggers a loss almost immediately
+        // Automatically show the loss message
+        setTimeout(loseGame, 500);
     }
 </script>
 </head>
@@ -49,7 +55,7 @@
 <h1>Welcome to The Game</h1>
 <p>The Game is simple: once you think about it… you lose.</p>
 <p>Now that you know the rules, you’re playing.</p>
-<p id="reminder"></p>
-<button onclick="loseGame()">Click here if you want a reminder</button>
+<p id="reminder" class="loss-message"></p>
+<button onclick="loseGame()">Click here for a reminder</button>
 </body>
 </html>
