@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Game</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    h1 {
+        font-size: 3em;
+        color: #e94e77;
+    }
+    p {
+        font-size: 1.5em;
+        margin: 20px 0;
+    }
+    button {
+        padding: 15px 25px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 10px;
+        background-color: #4a90e2;
+        color: white;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+    button:hover {
+        background-color: #357ab8;
+    }
+</style>
+<script>
+    function loseGame() {
+        alert("You just lost The Game! 😵");
+        document.getElementById("reminder").textContent = "Yep… you thought about The Game. You lose!";
+    }
+
+    window.onload = function() {
+        setTimeout(loseGame, 500); // triggers a loss almost immediately
+    }
+</script>
+</head>
+<body>
+<h1>Welcome to The Game</h1>
+<p>The Game is simple: once you think about it… you lose.</p>
+<p>Now that you know the rules, you’re playing.</p>
+<p id="reminder"></p>
+<button onclick="loseGame()">Click here if you want a reminder</button>
+</body>
+</html>
